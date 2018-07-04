@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Codilar_Messages::js/subscriber.js" />
+        <css src="Codilar_Messages::css/toastr.min.css" />
+    </head>
+    <referenceContainer name="page.messages" remove="true" />
+</page>
