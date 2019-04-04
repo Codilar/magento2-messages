@@ -4,5 +4,6 @@
         <script src="Codilar_Messages::js/subscriber.js" />
         <css src="Codilar_Messages::css/toastr.min.css" />
     </head>
-    <referenceContainer name="page.messages" remove="true" />
+    <referenceBlock name="messages" remove="true" />
+    <referenceBlock name="ajax.message.placeholder" remove="true" />
 </page>
