@@ -6,4 +6,8 @@
     </head>
     <referenceBlock name="messages" remove="true" />
     <referenceBlock name="ajax.message.placeholder" remove="true" />
+    <referenceContainer name="main.content">
+        <block class="Codilar\Messages\Block\ToastMessageConfigurations" name="add_toast_message_config" before="-" template="Codilar_Messages::toast.phtml">
+        </block>
+    </referenceContainer>
 </page>

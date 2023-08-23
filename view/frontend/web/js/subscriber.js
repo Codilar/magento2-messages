@@ -1,16 +1,16 @@
-requirejs([
+require([
     'jquery',
     'Magento_Customer/js/customer-data',
     'toastr'
 ], function($, customerData, toastr){
-    var observableObject = customerData.get('messages');
+    let observableObject = customerData.get('messages');
 
     toastr.options = {
-        "closeButton": false,
+        "closeButton": window.toastConfig.show_close_button ?? false,
         "debug": false,
         "newestOnTop": true,
         "progressBar": false,
-        "positionClass": "toast-bottom-left",
+        "positionClass": window.toastConfig.message_position ?? "toast-bottom-left",
         "preventDuplicates": false,
         "onclick": null,
         "showDuration": "300",
@@ -23,7 +23,7 @@ requirejs([
         "hideMethod": "fadeOut"
     };
 
-    var showToastMessage = function(data){
+    let showToastMessage = function(data){
         try{
             data.messages.forEach(function(message){
                 switch(message.type){
@@ -41,7 +41,7 @@ requirejs([
     };
 
     /* Show initial messages */
-    var previousMessages = $.cookieStorage.get('mage-messages');
+    let previousMessages = $.cookieStorage.get('mage-messages');
     $.cookieStorage.set('mage-messages', '');
     showToastMessage({'messages' : previousMessages});
 

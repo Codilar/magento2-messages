@@ -1,0 +1,7 @@
+<?php
+/** @var \Codilar\Messages\Block\ToastMessageConfigurations $block */
+$configurations = $block->getConfigurations();
+?>
+<script>
+    window.toastConfig = <?= /* @noEscape */ $block->getSerializedConfiguration() ?>;
+</script>
