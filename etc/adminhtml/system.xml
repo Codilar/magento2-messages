@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="codilar" translate="label" sortOrder="10">
+            <label>Codilar</label>
+        </tab>
+        <section id="toast_message" translate="label" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Toast Message</label>
+            <tab>codilar</tab>
+            <resource>Codilar_Messages::config</resource>
+            <group id="general_configuration" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1">
+                <label> General Configuration </label>
+                <field id="show_close_button" translate="label comment" type="select" sortOrder="25" showInDefault="1"  showInWebsite="1">
+                    <label>Show Close Button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="message_position" translate="label comment" type="select" sortOrder="25" showInDefault="1"  showInWebsite="1">
+                    <label>Message Position</label>
+                    <source_model>Codilar\Messages\Model\Config\Source\MessagePosition</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

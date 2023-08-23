@@ -2,7 +2,7 @@
   "name": "codilar/magento2-messages",
   "description": "Show all the session messages in a better way.",
   "require": {
-    "php": "7.0.2|7.0.4|~7.0.6|~7.1.0",
+    "php": ">=7.0",
     "magento/framework": ">=100.0.0",
     "magento/module-theme": ">=100.0.0"
   },
